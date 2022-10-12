@@ -1,11 +1,12 @@
 import React, { createContext } from 'react'
 import { Outlet } from 'react-router-dom'
+import Toastify from '../Toastify/Toastify';
 export const UserContext = createContext([]);
 function Layout() {
     return (
         <div>
             <UserContext.Provider>
-                <div className='font-bold text-xl text-center'>Something</div>
+                <Toastify/>
                 <Outlet/>
             </UserContext.Provider>
         </div>
